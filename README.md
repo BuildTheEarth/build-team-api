@@ -10,12 +10,12 @@ The Build Team API can only be used by build teams.
 Go to https://buildtheearth.net/buildteams/{id}/api-key (and )replace {id} with the ID of your build team). Generate an API key. You can always come back to this page to retrieve your key again, or invalidate it and generate a new key. 
 
 ### Making requests
+All endpoints live on `https://buildtheearth.net/api/v1/....`. Requests must be made over HTTPS.
 When making requests to the Build Team API, you must include the following HTTP headers:
 
+    Host: buildtheearth.net
     Authorization: Bearer <api-key>
     Accept: application/json
-
-All requests
 
 ## Endpoints
 The following endpoints exists. If you think another endpoint is really necessary, send a message to Xesau#1681 on Discord.
