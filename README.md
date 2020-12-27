@@ -98,6 +98,7 @@ The response will be an object with the property `applications`, which is an arr
   * `id`: integer, the ID of the question,
   * `question`: string, the text of the question,
   * `answer`: string, the applicant's answer to the question
+* `mediaUrl`: string, the media URL submitted with the application
 
 #### Example response
 
@@ -109,6 +110,38 @@ The response will be an object with the property `applications`, which is an arr
                     "discordTag": "Xesau#1681",
                     "discordId": 146312749146701824
                 },
+                "answers": [
+                    {
+                        "id": 3912,
+                        "question": "Do you have much experience building homes?",
+                        "answer": "Only a little"
+                    },
+                    ...
+                ],
+                "media": "https://imgur.com/a/....."
+            }
+        ]
+    }
+
+### GET /api/v1/applications/{id}
+This endpoint can be used to list applications by a member.
+The `id` parameter refers to the member ID.
+
+#### Structure
+The response will be an object with the property `applications`, which is an array of objects with the following properties:
+* `id`: integer, the ID of the application
+* `answers`: array, an array of objects with the properties
+  * `id`: integer, the ID of the question,
+  * `question`: string, the text of the question,
+  * `answer`: string, the applicant's answer to the question
+* `mediaUrl`: string, the media URL submitted with the application
+
+#### Example response
+
+    {
+        "applications": [
+            {
+                "id": 34251,
                 "answers": [
                     {
                         "id": 3912,
